@@ -1,24 +1,17 @@
 # print('hello pyCharm')
 
 def sum_pairs(ints, s):
-    resultPair = None
-    currentList = list(ints)
+    seenYouBefore = set()
 
-    def iterateList(list, needSum):
-        nonlocal resultPair, currentList
+    for num in ints:
+        difference = s - num
 
-        if currentList:
+        if num in seenYouBefore:
+            return [difference, num]
 
-            for i in range(len(list)):
-                for j in range(i+1, len(list)):
-                    if list[i]+list[j] == needSum:
-                        resultPair = [list[i], list[j]]
-                        currentList = currentList[i+1:j]
-                        return iterateList(currentList, needSum)
+        seenYouBefore.add(difference)
 
-    iterateList(currentList, s)
-
-    return resultPair
+    return None
 
 
 print(sum_pairs([10, 5, 2, 8, 3, 7, 5],10))
