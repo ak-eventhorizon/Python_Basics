@@ -1,20 +1,17 @@
 # print('hello pyCharm')
 
 def sum_pairs(ints, s):
-    seenYouBefore = set()
+    seen_you_before = set()
 
     for num in ints:
         difference = s - num
 
-        if num in seenYouBefore:
+        if num in seen_you_before:
             return [difference, num]
 
-        seenYouBefore.add(difference)
+        seen_you_before.add(difference)
 
     return None
 
 
-print(sum_pairs([10, 5, 2, 8, 3, 7, 5],10))
-
-# работает, но на больших входных списках отваливается по таймауту, сложность O(n^2)
-# переделать на сложность O(n)
+print(sum_pairs([10, 5, 2, 8, 3, 7, 5], 10))
