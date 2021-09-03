@@ -1,17 +1,9 @@
 # print('hello pyCharm')
 
-def sum_pairs(ints, s):
-    seen_you_before = set()
+x = 1
+y = 1
+z = 2
+n = 3
 
-    for num in ints:
-        difference = s - num
-
-        if num in seen_you_before:
-            return [difference, num]
-
-        seen_you_before.add(difference)
-
-    return None
-
-
-print(sum_pairs([10, 5, 2, 8, 3, 7, 5], 10))
+my_list = [[a, b, c] for a in range(x+1) for b in range(y+1) for c in range(z+1) if sum([a,b,c]) != n]
+print(my_list)
