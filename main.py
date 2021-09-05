@@ -1,7 +1,12 @@
-def mutate_string(string, position, character):
-    listed_string = list(string)
-    listed_string[position] = character
-    mutated_string = ''.join(listed_string)
-    return mutated_string
+def count_substring(string, sub_string):
+    counter = 0
+    sub_string_len = len(sub_string)
 
-print(mutate_string('abracadabra', 5, 'k'))
+    for i in range(len(string)):
+        if string[i:i + sub_string_len] == sub_string:
+            counter += 1
+
+    return counter
+
+
+print(count_substring('ABCDCDC', 'CDC'))
