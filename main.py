@@ -1,9 +1,26 @@
 # print('hello pyCharm')
 
-students_marks = {'Krishna': [67, 68, 69], 'Arjun': [70, 98, 63], 'Malika': [52, 56, 60]}
+if __name__ == '__main__':
+    N = int(input())
+    my_list = list()
 
-query_name = 'Malika'
+    for i in range(N):
+        user_input = input().split(' ')
+        command = user_input[0]
+        args = user_input[1:]
+        args = [int(elem) for elem in args]
 
-if query_name in students_marks:
-    result = sum(students_marks[query_name]) / len(students_marks[query_name])
-    print(format(result, '.2f'))
+        if command == 'insert':
+            my_list.insert(args[0], args[1])
+        elif command == 'print':
+            print(my_list)
+        elif command == 'remove':
+            my_list.remove(args[0])
+        elif command == 'append':
+            my_list.append(args[0])
+        elif command == 'sort':
+            my_list.sort()
+        elif command == 'pop':
+            my_list.pop()
+        elif command == 'reverse':
+            my_list.reverse()
