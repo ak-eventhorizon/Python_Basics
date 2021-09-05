@@ -1,7 +1,4 @@
-def split_and_join(line: str) -> str:
+def print_full_name(first, last):
+    return(f'Hello {first} {last}! You just delved into python.')
 
-    return '-'.join(line.split(' '))
-
-
-
-print(split_and_join('this is a string'))
+print(print_full_name('al', 'boon'))
