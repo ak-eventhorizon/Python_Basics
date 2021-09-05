@@ -1,4 +1,7 @@
-def print_full_name(first, last):
-    return(f'Hello {first} {last}! You just delved into python.')
+def mutate_string(string, position, character):
+    listed_string = list(string)
+    listed_string[position] = character
+    mutated_string = ''.join(listed_string)
+    return mutated_string
 
-print(print_full_name('al', 'boon'))
+print(mutate_string('abracadabra', 5, 'k'))
