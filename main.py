@@ -1,12 +1,14 @@
-def count_substring(string, sub_string):
-    counter = 0
-    sub_string_len = len(sub_string)
+string = 'QA2'
 
-    for i in range(len(string)):
-        if string[i:i + sub_string_len] == sub_string:
-            counter += 1
-
-    return counter
+print(any(char.isalnum() for char in string))
+print(any(char.isalpha() for char in string))
+print(any(char.isdigit() for char in string))
+print(any(char.islower() for char in string))
+print(any(char.isupper() for char in string))
 
 
-print(count_substring('ABCDCDC', 'CDC'))
+# In the first line, print True if  has any alphanumeric characters. Otherwise, print False.
+# In the second line, print True if  has any alphabetical characters. Otherwise, print False.
+# In the third line, print True if  has any digits. Otherwise, print False.
+# In the fourth line, print True if  has any lowercase characters. Otherwise, print False.
+# In the fifth line, print True if  has any uppercase characters. Otherwise, print False.
