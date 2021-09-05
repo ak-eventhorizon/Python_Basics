@@ -1,5 +1,9 @@
-import textwrap
+N, M = map(int, input().split())
 
-string = "ABCDEFGHIJKLIMNOQRSTUVWXYZ"
-print(textwrap.wrap(string,4))
-print(textwrap.fill(string,4))
+for i in range(1, N, 2):
+    print((i * ".|.").center(M, "-"))
+
+print("WELCOME".center(M, "-"))
+
+for i in range(N-2, -1, -2):
+    print((i * ".|.").center(M, "-"))
