@@ -1,22 +1,6 @@
-def dec_to_base(num, base):
-    alphabet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
-    result = ''
-    while num > 0:
-        num, m = divmod(num, base)
-        result += alphabet[m]
-    return result[::-1]
+def staircase(n):
+    for i in range(1, n+1):
+        stair = '#'*i
+        print(stair.rjust(n, ' '))
 
-
-def print_formatted(number):
-    for i in range(1, number+1):
-        width = len(dec_to_base(number, 2))
-
-        num_dec = str(i).rjust(width, ' ')
-        num_bin = dec_to_base(i, 2).rjust(width, ' ')
-        num_oct = dec_to_base(i, 8).rjust(width, ' ')
-        num_hex = dec_to_base(i, 16).rjust(width, ' ')
-
-        print(num_dec, num_oct, num_hex, num_bin)
-
-
-print_formatted(16)
+staircase(6)
