@@ -19,4 +19,4 @@ def print_formatted(number):
         print(num_dec, num_oct, num_hex, num_bin)
 
 
-print_formatted(16)
+print_formatted(15)
