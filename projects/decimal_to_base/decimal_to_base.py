@@ -19,4 +19,5 @@ def print_formatted(number):
         print(num_dec, num_oct, num_hex, num_bin)
 
 
-print_formatted(15)
+if __name__ == '__main__':
+    print_formatted(15)

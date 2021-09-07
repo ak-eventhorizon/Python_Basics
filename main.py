@@ -3,4 +3,5 @@ def staircase(n):
         stair = '#'*i
         print(stair.rjust(n, ' '))
 
+
 staircase(6)
