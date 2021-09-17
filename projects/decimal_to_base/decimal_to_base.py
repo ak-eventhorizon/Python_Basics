@@ -1,4 +1,6 @@
-def dec_to_base(num, base):
+def dec_to_base(num: int, base: int) -> str:
+    """Перевод десятичного числа в систему счисления по основанию base."""
+
     alphabet = "0123456789ABCDEFGHIJKLMNOPQRSTUVWXYZ"
     result = ''
     while num > 0:
@@ -7,7 +9,9 @@ def dec_to_base(num, base):
     return result[::-1]
 
 
-def print_formatted(number):
+def print_formatted(number: int):
+    """Форматированный вывод чисел от 1 до number в четырех системах счисления."""
+
     for i in range(1, number+1):
         width = len(dec_to_base(number, 2))
 
