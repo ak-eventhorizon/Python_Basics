@@ -1,4 +1,6 @@
 def determinant(matrix: list) -> int:
+    """Determinant of 2d-matrix."""
+
     total = 0
     # Section 1: store indexes in list for row referencing
     indexes = list(range(len(matrix)))
