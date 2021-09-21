@@ -3,37 +3,30 @@ class Player:
 
     side: \n
     'c' - consonants (согласные) \n
-    'v' - vowels (гласные)
+    'v' - vowels (гласные) \n
+
+    Подход: количество подстрок, начинающихся с определенной буквы в строке равно
+    длине подстроки от этой буквы до конца строки. Например, берем подстроку "ANANA"
+    в стоке "BANANA". Количество подстрок в ней = 5:
+    ANANA
+    ANAN
+    ANA
+    AN
+    A
     """
 
     def __init__(self, string, side):
         self.string = string
-        self.all_substrings = list()
-        self.player_substrings = set()
         self.side = side  # 'c' - consonants (согласные) or 'v' - vowels (гласные)
         self.score = 0
-
-        self.set_all_substrings()
-        self.set_player_substrings()
         self.calculate_score()
 
-    def set_all_substrings(self):
-        self.all_substrings = [
-            self.string[i:j]
-            for i in range(len(self.string))
-            for j in range(i + 1, len(self.string) + 1)
-        ]
-
-    def set_player_substrings(self):
-        for substring in self.all_substrings:
-            if self.side == 'v' and substring[0] in 'AEIOU':
-                self.player_substrings.add(substring)
-            elif self.side == 'c' and substring[0] not in 'AEIOU':
-                self.player_substrings.add(substring)
-
     def calculate_score(self):
-        for substring in self.player_substrings:
-            self.score += self.all_substrings.count(substring)
+        for i in range(len(self.string)):
+            if self.side == 'v' and self.string[i] in 'AEIOU':
+                self.score += len(self.string[i:])
+            elif self.side == 'c' and self.string[i] not in 'AEIOU':
+                self.score += len(self.string[i:])
 
 
 def minion_game(string: str) -> None:
@@ -53,4 +46,4 @@ if __name__ == '__main__':
     minion_game('BANANA')  # -> Stuart 12
     minion_game('BAAA')  # -> Kevin 6
     minion_game('CRUSIFICTIONATION')  # -> Stuart 89
-    minion_game('ABBA')  # -> DRAW!
+    minion_game('ABBA')  # -> Draw
