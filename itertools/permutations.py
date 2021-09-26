@@ -3,7 +3,7 @@ from itertools import permutations
 
 def show_permutations():
     string, length = input('Input "STRING <space> num": ').split()
-    result = list(permutations(string, int(length)))
+    result = permutations(string, int(length))
 
     for elem in result:
         print(''.join(elem))
