@@ -26,9 +26,7 @@ print(d2) -> defaultdict(<class 'list'>, {'first': []})
 
 
 def main():
-    size_a, size_b = input('Size Group A <space> Size Group B: ').split()
-    size_a = int(size_a)
-    size_b = int(size_b)
+    size_a, size_b = list(map(int, input('Size Group A <space> Size Group B: ').split()))
 
     my_dict = defaultdict(list)
 
