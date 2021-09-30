@@ -10,10 +10,10 @@ def shoe_shop_profit(sizes: str, number_of_customers: int) -> None:
     for i in range(1, number_of_customers + 1):
         customer_input = input(f'Customer {i} (size offer): ').split(' ')
         needed_size = int(customer_input[0])
-        offered_prise = int(customer_input[1])
+        offered_price = int(customer_input[1])
 
         if collection_stats[needed_size]:
-            profit += offered_prise
+            profit += offered_price
             collection_stats[needed_size] -= 1
 
     print(profit)
