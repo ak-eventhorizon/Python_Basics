@@ -2,7 +2,7 @@ import re
 
 
 def floating_validator(string: str) -> bool:
-    pattern = r'^[+-]?([0-9]*[.])?[0-9]+$'
+    pattern = r'^[-+]?[0-9]*\.[0-9]+$'
     res = re.match(pattern, string)
     return bool(res)
 
