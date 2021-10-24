@@ -21,11 +21,3 @@ if __name__ == '__main__':
     print(floating_validator('-1.00'))      # True
     print(floating_validator('+4.54'))      # True
     print(floating_validator('Somthn'))     # False
-
-    # этот блок для выполнения упражнения на хакерранк, в гит уго помещать не нужно
-    test_cases = int(input())
-    results = list()
-    for i in range(test_cases):
-        results.append(floating_validator(input()))
-    for result in results:
-        print(result)
