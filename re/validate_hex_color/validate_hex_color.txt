@@ -1,0 +1,11 @@
+#BED - это не цвет, а css селектор
+{
+    color: #FfFdF8; background-color:#aef;
+    font-size: 123px;
+    background: -webkit-linear-gradient(top, #f9f9f9, #fff);
+}
+#Cab - это не цвет, а css селектор
+{
+    background-color: #ABC;
+    border: 2px dashed #fff;
+}
