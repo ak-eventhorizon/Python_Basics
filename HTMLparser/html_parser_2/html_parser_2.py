@@ -44,18 +44,6 @@ def html_parse(s: str) -> None:
 
 if __name__ == '__main__':
 
-    # # Блок для hackerrank - в гит не помещать
-    # test_cases = int(input())
-    # content = str()
-    #
-    # for i in range(test_cases):
-    #     if i == test_cases - 1:
-    #         content += input()
-    #     else:
-    #         content += input() + '\n'
-    #
-    # html_parse(content)
-
     # Блок с формированием входных данных из файла
     with open('data.txt', 'r') as f:
         content = f.read()
