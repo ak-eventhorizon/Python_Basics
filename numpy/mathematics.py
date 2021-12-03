@@ -70,6 +70,7 @@ def main(arr1: list, arr2: list) -> None:
     print(a1 % a2)
     print(a1 ** a2)
 
+
 if __name__ == '__main__':
 
     # input for hackerrank
